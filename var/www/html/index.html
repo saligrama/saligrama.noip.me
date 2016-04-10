@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Aditya's Web Server</title>
+	<H1>Welcome to Aditya's webserver.</H1>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	<div id="time">
+		<script type="text/javascript">
+		var currentTime = new Date()
+		var hours = currentTime.getHours()
+		var minutes = currentTime.getMinutes()
+
+		if (minutes < 10)
+			minutes = "0" + minutes
+		var suffix = "AM";
+		if (hours >= 12) {
+			suffix = "PM";
+			hours = hours - 12;
+		}
+		if (hours == 0) {
+			hours = 12;
+		}
+		document.write("<b>" + hours + ":" + minutes + " " + suffix + "</b>")
+		</script>
+		<br>
+		<script type="text/javascript">
+		var currentDate = new Date()
+		var day = currentDate.getDate()
+		var month = currentDate.getMonth() + 1
+		var year = currentDate.getFullYear()
+		document.write("<b>" + month + "/" + day + "/" + year + "</b>")
+		</script>
+	</div>
+	<div class="books">
+		<a href="http://saligrama.noip.me/iptest">IP test</a><br>
+		<a href="http://saligrama.noip.me:8081">Camera</a><br>
+		<a href="http://github.com/saligrama">GitHub</a><br>
+	</div>
+	Questions? Email <a href="mailto:saligrama.webserver@gmail.com">saligrama.webserver@gmail.com</a>.
+</body>
+</html>
